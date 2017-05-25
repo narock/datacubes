@@ -4,6 +4,8 @@ import com.hp.hpl.jena.ontology.OntModel;
 
 public interface DataCube {
 	
-	OntModel readData();
+	void setOntModel ( OntModel ontModel );
+	
+	OntModel getOntModel ();
 	
 }

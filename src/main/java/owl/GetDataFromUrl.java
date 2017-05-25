@@ -1,51 +1,48 @@
 package owl;
 
-import com.hp.hpl.jena.util.iterator.*;
-
 import util.Config;
 import util.Namespaces;
 import util.DownloadFile;
 
 import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.ontology.Individual;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntResource;
 
 public class GetDataFromUrl {
-	
-	
-    public void downloadFromOntModel (OntModel ontModel) {
+		
+    public String downloadFromOntModel (Individual accessPathInstance, OntModel ontModel, boolean verbose) {
 		
     	// download object
     	DownloadFile downloadFile = new DownloadFile ();
+    	    	
+    	// get the property value
+    	Instances instances = new Instances ();
+    	String hasUrlUri = Namespaces.pid + "hasUrl";
+    	String url = instances.getDataPropertyValue( ontModel, accessPathInstance, hasUrlUri);
     	
-    	// set up the URIs and property names we'll need later
-    	String hasUrlUri = Namespaces.pid + "#hasUrl";
-        String fileAccessPathUri = Namespaces.pid + "#FileAccessPath";
-    	Property hasUrl = ontModel.createProperty( hasUrlUri );
-    	
-    	// get the FileAccessPath class from the ontology model
-    	OntClass fileAccessPath = ontModel.getOntClass( fileAccessPathUri );
-
-        // get instances of the FileAccessPath class
-    	boolean success = false;
-        ExtendedIterator<? extends OntResource> it = fileAccessPath.listInstances();
-        while( it.hasNext() ){
-        
-        	// grab the property we're interested in, and its value, from the instances of FileAccessPath
-        	Individual in = (Individual) it.next();            
-            RDFNode node = in.getPropertyValue( hasUrl );
-            String[] parts = node.toString().split("\\^"); // remove the anyURI type information
-            String url = parts[0].trim();
-            parts = url.split("/");
-            String filename = parts[ parts.length-1 ];
-            success = downloadFile.download( url, Config.downloadDir + filename );
-            System.out.println( "Downloading: " + url + ", " + success);
+    	// set up the filename and prepare for download
+        String indexStr = String.valueOf( Config.downloadIndex );
+        if ( Config.downloadIndex < 10 ) { indexStr = "0" + indexStr;  } 
+        Config.downloadIndex++;
+        String filename = "download_" + indexStr;
             
+        if (verbose) { 
+           System.out.println( "  File Access Path URI: " + accessPathInstance.getURI() ); 
+           System.out.println( "    Downloading: " + url );
         }
-    
+            
+        // download the file
+        boolean success = downloadFile.download( url, Config.downloadDir + filename );
+           
+        if (verbose) { 
+           System.out.println( "    Downloaded to: " + Config.downloadDir + filename + ", Success = " + success);
+           System.out.println();
+        }
+            
+        // return the downloaded filename otherwise null
+        String result = null;
+        if ( success ) { result = Config.downloadDir + filename; }
+        return result;
+        
     }
     
 }

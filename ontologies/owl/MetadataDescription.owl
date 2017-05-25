@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.esipfed.org/MetadataDescription#"
+     xml:base="http://www.esipfed.org/MetadataDescription"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:MetadataDescription="http://www.esipfed.org/MetadataDescription#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.esipfed.org/MetadataDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#containsDataElement -->
+
+    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#containsDataElement">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
+        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasDataArrangement -->
+
+    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataArrangement">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
+        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasDataColumn -->
+
+    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataColumn">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#CsvArrangement"/>
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#TsvArrangement"/>
+        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasDataElement -->
+
+    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataElement">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasColumnNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasColumnNumber"/>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasCommonName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasCommonName">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasDataType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataType">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasEndDate">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasFillValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasFillValue"/>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasHeaderLines -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasHeaderLines">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasLocalName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasLocalName">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasStartDate">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#hasUnits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasUnits">
+        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#AsciiArrangement -->
+
+    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#AsciiArrangement">
+        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#BinaryArrangement -->
+
+    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#BinaryArrangement">
+        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#CsvArrangement -->
+
+    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#CsvArrangement">
+        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#DataArrangement -->
+
+    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#DataColumn -->
+
+    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataColumn"/>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#DataElement -->
+
+    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#MetadataDescription -->
+
+    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
+    
+
+
+    <!-- http://www.esipfed.org/MetadataDescription#TsvArrangement -->
+
+    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#TsvArrangement">
+        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

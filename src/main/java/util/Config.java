@@ -7,4 +7,7 @@ public class Config {
 	// be sure to include the trailing /
 	public static final String downloadDir = "/Users/narock/Desktop/download/";
 
+	// download index
+	public static int downloadIndex = 0;
+		
 }

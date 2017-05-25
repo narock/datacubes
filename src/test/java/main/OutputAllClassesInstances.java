@@ -18,12 +18,15 @@ public class OutputAllClassesInstances {
 		//
 		// test code to read sample ODP files and print out all the classes and instances
 		
-		String dir = "/Users/narock/Dropbox/DataCubes/ontologies/owl/with_Instances/";
+		String dir = args[0]; // args[0] should include the trailing /
 		
 		ArrayList <String> files = new ArrayList <String> ();
-		files.add(dir + "DigitalObject.owl");
-		files.add(dir + "PersistentID.owl");
-		files.add(dir + "MetadataDescription.owl");
+		files.add(dir + "2333/DigitalObject_2333.owl");
+		files.add(dir + "2333/PersistentID_2333.owl");
+		files.add(dir + "2333/MetadataDescription_2333.owl");
+		files.add(dir + "552076/DigitalObject_552076.owl");
+		files.add(dir + "552076/PersistentID_552076.owl");
+		files.add(dir + "552076/MetadataDescription_552076.owl");
 		
 		MergedModel model = new MergedModel();
 		OntModel ontModel = model.readFromFiles(files);
