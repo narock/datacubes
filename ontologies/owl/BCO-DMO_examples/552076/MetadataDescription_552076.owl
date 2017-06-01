@@ -338,46 +338,55 @@
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taxon</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement02_552076">
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">station</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement03_552076">
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement04_552076">
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lat_start</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement05_552076">
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lon_start</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement06_552076">
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">depth_start</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement07_552076">
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">depth_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement08_552076">
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement09_552076">
         <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abund</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
 
 </rdf:RDF>

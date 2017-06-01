@@ -4,10 +4,9 @@ import owl.MergedModel;
 
 import java.util.ArrayList;
 
-import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.Individual;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.Individual;
 
 import read.DataCubeFactory;
 import read.DataCube;
@@ -25,9 +24,9 @@ public class TestWorkflow {
 		String dir = args[0]; // args[0] should include the trailing "/"
 		
 		ArrayList <String> files = new ArrayList <String> ();
-		files.add(dir + "2333/DigitalObject_2333.owl");
-		files.add(dir + "2333/PersistentID_2333.owl");
-		files.add(dir + "2333/MetadataDescription_2333.owl");
+		//files.add(dir + "2333/DigitalObject_2333.owl");
+		//files.add(dir + "2333/PersistentID_2333.owl");
+		//files.add(dir + "2333/MetadataDescription_2333.owl");
 		files.add(dir + "552076/DigitalObject_552076.owl");
 		files.add(dir + "552076/PersistentID_552076.owl");
 		files.add(dir + "552076/MetadataDescription_552076.owl");
@@ -74,12 +73,16 @@ public class TestWorkflow {
 			// try a SPARQL query over the datacube
 			OntModel cubeOntModel = datacube.getOntModel();
 			String query = 
-					"SELECT ?s ?p ?o WHERE { " +
-		            "  ?s ?p ?o . " +
+					"SELECT ?obs WHERE { " +
+					"  ?obs a <http://purl.org/linked-data/cube#Observation> . " +
+		            "  ?obs <http://www.esipfed.org/datacube#taxon> ?value . " +
+					"  FILTER ( regex (str(?value), \"Calanus_finmarchicus\", \"i\") ) " +
 		            "}";
 			SparqlQueryExecution sparql = new SparqlQueryExecution ();
-			ResultSet resultSet = sparql.queryMemoryModel(cubeOntModel, query);
-			sparql.getSparqlResults(resultSet, null);
+			ArrayList <String> results = sparql.queryMemoryModel(cubeOntModel, query, "?obs");
+			for ( int i=0; i<results.size(); i++ ) {
+				System.out.println("Calanus finmarchicus found in observation: " + results.get(i));
+			}
 			
 		}
 		

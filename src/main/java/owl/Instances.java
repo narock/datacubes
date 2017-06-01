@@ -1,14 +1,14 @@
 package owl;
 
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.util.iterator.*;
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.Individual;
-import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntResource;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.Statement;
+import org.apache.jena.rdf.model.StmtIterator;
+import org.apache.jena.util.iterator.*;
+import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.Individual;
+import org.apache.jena.ontology.OntClass;
+import org.apache.jena.ontology.OntResource;
 
 import java.util.ArrayList;
 
@@ -100,10 +100,17 @@ public class Instances {
     
     public String getDataPropertyValue (OntModel ontModel, Individual in, String propertyUri) {
     	
+    	String propertyValue = null;
     	Property property = ontModel.createProperty( propertyUri );
     	RDFNode node = in.getPropertyValue( property );
-        String[] parts = node.toString().split("\\^"); // remove type information
-        String propertyValue = parts[0].trim();
+    	
+    	if ( node != null ) { // check if the property exists in the ontology
+        
+    		String[] parts = node.toString().split("\\^"); // remove type information
+    		propertyValue = parts[0].trim();
+    		
+    	} 
+    	
         return propertyValue;
         
     }

@@ -2,20 +2,25 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>esipfed.org</groupId>
   <artifactId>datacubes</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <name>RDF DataCubes in the Geosciences</name>
   <dependencies>
-    <dependency>
-      <groupId>com.hp.hpl.jena</groupId>
-      <artifactId>jena</artifactId>
-      <version>2.6.0</version>
-      <type>pom</type>
-      <scope>compile</scope>
-    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.jena/jena-core -->
+	<dependency>
+    	<groupId>org.apache.jena</groupId>
+    	<artifactId>jena-core</artifactId>
+    	<version>3.3.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.jena/jena-arq -->
+	<dependency>
+    	<groupId>org.apache.jena</groupId>
+    	<artifactId>jena-arq</artifactId>
+    	<version>3.3.0</version>
+	</dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>1.5.6</version>
+      <version>1.7.25</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

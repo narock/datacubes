@@ -1,6 +1,6 @@
 package read;
 
-import com.hp.hpl.jena.ontology.OntModel;
+import org.apache.jena.ontology.OntModel;
 
 public interface DataCube {
 	

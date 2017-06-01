@@ -12,12 +12,13 @@ import util.Namespaces;
 import write.DataCubeFromRows;
 import owl.Instances;
 import read.file.AsciiMetadata;
-
-import com.hp.hpl.jena.ontology.Individual;
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntModelSpec;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.Property;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import org.apache.jena.ontology.Individual;
+import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
 import com.univocity.parsers.tsv.TsvParser;
 import com.univocity.parsers.tsv.TsvParserSettings;
 
@@ -58,14 +59,19 @@ public class TsvFile implements DataCube {
 					Namespaces.metadataDescription + "hasLocalName");
 			String dataType = instances.getDataPropertyValue(ontModel, dataElement, 
 					Namespaces.metadataDescription + "hasDataType");
-			//String commonName = instances.getDataPropertyValue(ontModel, dataElement, 
-			//		Namespaces.metadataDescription + " hasCommonName");
-			//String units = instances.getDataPropertyValue(ontModel, dataElement, 
-			//		Namespaces.metadataDescription + " hasUnits");
+			String fillValue = instances.getDataPropertyValue(ontModel, dataElement, 
+					Namespaces.metadataDescription + "hasFillValue");
+			String commonName = instances.getDataPropertyValue(ontModel, dataElement, 
+					Namespaces.metadataDescription + " hasCommonName");
+			String units = instances.getDataPropertyValue(ontModel, dataElement, 
+					Namespaces.metadataDescription + " hasUnits");
 		
 			AsciiMetadata m = metadata.get(columnNumber);
 			m.setLocalName( localName );
 			m.setDataType( dataType );
+			m.setFillValue( fillValue );
+			m.setUnits( units );
+			m.setCommonName( commonName );
 			metadata.set( columnNumber, m );
 		
 		}
@@ -101,11 +107,17 @@ public class TsvFile implements DataCube {
 	    	
 	    // write turtle out to file for testing
 	    FileWrite fw = new FileWrite();
-	    fw.newFile( Config.downloadDir + "turtle_output.ttl", turtle);
+	    String[] parts = fileAccessPathUri.split("#");
+	    String f = Config.downloadDir + "datacube_" + parts[1].trim() + ".ttl";
+	    fw.newFile( f, turtle );
 	    
 	    // read into a new ontology model
 		OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_RDFS_INF);
-		model.read( turtle );
+		try {
+			model.read(new FileInputStream(f),null,"TTL");
+		} catch ( FileNotFoundException exp ) {
+			System.out.println( exp );
+		}
 		
 	    return model;
 	    		

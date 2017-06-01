@@ -4,8 +4,8 @@ import util.Config;
 import util.Namespaces;
 import util.DownloadFile;
 
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.Individual;
+import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.Individual;
 
 public class GetDataFromUrl {
 		

@@ -3,7 +3,9 @@ package write;
 import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
+
 import read.file.AsciiMetadata;
+import util.Config;
 
 public class DataCubeFromRows {
 	
@@ -43,9 +45,13 @@ public class DataCubeFromRows {
 				
 				String[] parts = m.getDataType().split("#");
 				
-				turtle = turtle + "esip:" + m.getLocalName() + " a rdf:Property, " + newline +
+				// if we have a common name use that, otherwise use the local name
+				String n;
+				if ( m.getCommonName() != null ) { n = m.getCommonName(); } else { n = m.getLocalName(); }
+				
+				turtle = turtle + "esip:" + n + " a rdf:Property, " + newline +
 								  "qb:MeasureProperty; " + newline +
-								  " rdfs:label \"" + m.getLocalName() + "\"@en;" + newline +
+								  " rdfs:label \"" + n + "\"@en;" + newline +
 								  " rdfs:subPropertyOf sdmx-measure:obsValue; " + newline +
 								  " rdfs:range xsd:" + parts[1].trim() + " . " + newline;
 			}
@@ -60,7 +66,12 @@ public class DataCubeFromRows {
 			// Here we start at 1 to be consistent, first value is always empty
 			for ( int i=1; i<metadata.size(); i++ ) {
 				AsciiMetadata m = metadata.get(i);
-				turtle = turtle + "qb:component [qb:measure esip:" + m.getLocalName() + "]; " + newline;
+				
+				// if we have a common name use that, otherwise use the local name
+				String n;
+				if ( m.getCommonName() != null ) { n = m.getCommonName(); } else { n = m.getLocalName(); }
+				
+				turtle = turtle + "qb:component [qb:measure esip:" + n + "]; " + newline;
 			}
 			turtle = turtle + " . " + newline;
 			
@@ -95,11 +106,34 @@ public class DataCubeFromRows {
 				// Java starts counting at 0, but rows and columns in data start counting at 1
 				// Here we start at 1 to be consistent, first value is always empty
 				AsciiMetadata m = metadata.get(j+1);
+
+				// if we have a common name use that, otherwise use the local name
+				String n;
+				if ( m.getCommonName() != null ) { n = m.getCommonName(); } else { n = m.getLocalName(); }
 				
-				if ( m.getDataType().equals("http://www.w3.org/2001/XMLSchema#string") ) {
-					turtle = turtle + " esip:" + m.getLocalName() + " \"" + String.valueOf(row[j]) + "\" ; ";
-				} else {
-					turtle = turtle + " esip:" + m.getLocalName() + " " + String.valueOf(row[j]) + " ; ";
+				// check if this current value is a fill value
+				if ( !String.valueOf(row[j]).equals( m.getFillValue() )) {
+					
+					// if it's a string then we need to add quotes
+					if ( m.getDataType().equals("http://www.w3.org/2001/XMLSchema#string") ) {
+						turtle = turtle + " esip:" + n + " \"" + String.valueOf(row[j]) + "\" ; ";
+					} else {
+						turtle = turtle + " esip:" + n + " " + String.valueOf(row[j]) + " ; ";
+					}
+					
+				// is a fill value
+				} else { 
+				
+					// string fill value
+					if ( m.getDataType().equals("http://www.w3.org/2001/XMLSchema#string") ) {
+						turtle = turtle + " esip:" + n + " \"" + Config.fillValueString + "\" ; "; 
+					}
+					
+					// integer fill value
+					if ( m.getDataType().equals("http://www.w3.org/2001/XMLSchema#integer") ) {
+						turtle = turtle + " esip:" + n + " \"" + Config.fillValueInteger + "\" ; "; 
+					}
+					
 				}
 				
 				if ( j == row.length-1 ) { 

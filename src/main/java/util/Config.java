@@ -9,5 +9,10 @@ public class Config {
 
 	// download index
 	public static int downloadIndex = 0;
+	
+	// fill values
+	// keep the rdf range consistent. if the range is xsd:int then use int fill value, if string use string fill value
+	public static int fillValueInteger = -9999;
+	public static String fillValueString = "no_data";
 		
 }
