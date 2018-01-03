@@ -24,12 +24,12 @@ public class TestWorkflow {
 		String dir = args[0]; // args[0] should include the trailing "/"
 		
 		ArrayList <String> files = new ArrayList <String> ();
-		//files.add(dir + "2333/DigitalObject_2333.owl");
-		//files.add(dir + "2333/PersistentID_2333.owl");
-		//files.add(dir + "2333/MetadataDescription_2333.owl");
-		files.add(dir + "552076/DigitalObject_552076.owl");
-		files.add(dir + "552076/PersistentID_552076.owl");
-		files.add(dir + "552076/MetadataDescription_552076.owl");
+		//files.add(dir + "BCO-DMO_examples/2333_copy/DigitalObject_2333.owl");
+		//files.add(dir + "BCO-DMO_examples/2333_copy/PersistentID_2333.owl");
+		//files.add(dir + "BCO-DMO_examples/2333_copy/MetadataDescription_2333.owl");
+		files.add(dir + "BCO-DMO_examples/552076_copy/DigitalObject_552076.owl");
+		files.add(dir + "BCO-DMO_examples/552076_copy/PersistentID_552076.owl");
+		files.add(dir + "BCO-DMO_examples/552076_copy/MetadataDescription_552076.owl");
 		
 		// this factory will be used to create our data cubes
 		DataCubeFactory dcFactory = new DataCubeFactory ();
@@ -45,7 +45,7 @@ public class TestWorkflow {
 		
 		// print out a status update
 		int size = digitalObjects.size();
-		if ( verbose ) { System.out.println("Number of Digital Objects found: " + size); }
+		if ( verbose ) { System.out.println("Number of Digital Objects found: " + size + "\n"); }
 		
 		// loop over all the Digital Objects
 		String pidUri;
@@ -56,29 +56,36 @@ public class TestWorkflow {
 		for ( int index=0; index<size; index++ ) {
 
 			// get the Persistent ID associated with this Digital Object
+			if ( verbose ) { System.out.println("Getting Persistent ID from Digital Object..."); }
 			pidUri = instances.getObjectPropertyUri( digitalObjects.get(index), ontModel, isIdentifiedBy );
-			
+			System.out.println( pidUri );
+
 			// get the Access Path from the Persistent ID individual
+			if ( verbose ) { System.out.println("Getting Access Path from Persistent ID..."); }
 			Individual pidIn = instances.getIndividualFromUri( pidUri, ontModel );
 			accessPathUri = instances.getObjectPropertyUri( pidIn, ontModel, hasAccessPath );
 
 			// get the type of Access Path
+			if ( verbose ) { System.out.println("Getting Type of Access Path..."); }
 			Individual accessPathIn = instances.getIndividualFromUri( accessPathUri, ontModel );
 			String accessPathType = instances.getObjectPropertyUri( accessPathIn, ontModel, rdfType );
 			
 			// use the Access Path Type to create and populate DataCube
+			if ( verbose ) { System.out.println("Creating DataCube..."); }
 			DataCube datacube = dcFactory.createDataCube( digitalObjects.get(index), accessPathType, accessPathUri, 
 					ontModel, verbose );
 						
 			// try a SPARQL query over the datacube
+			if ( verbose ) { System.out.println("Generating ontology model from DataCube..."); }
 			OntModel cubeOntModel = datacube.getOntModel();
 			String query = 
 					"SELECT ?obs WHERE { " +
 					"  ?obs a <http://purl.org/linked-data/cube#Observation> . " +
-		            "  ?obs <http://www.esipfed.org/datacube#taxon> ?value . " +
+		            "  ?obs <http://purl.org/narock/dc/datacube#taxon> ?value . " +
 					"  FILTER ( regex (str(?value), \"Calanus_finmarchicus\", \"i\") ) " +
 		            "}";
 			SparqlQueryExecution sparql = new SparqlQueryExecution ();
+			if ( verbose ) { System.out.println("Executing SPARQL Query Over DataCube..."); }
 			ArrayList <String> results = sparql.queryMemoryModel(cubeOntModel, query, "?obs");
 			for ( int i=0; i<results.size(); i++ ) {
 				System.out.println("Calanus finmarchicus found in observation: " + results.get(i));

@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.esipfed.org/DigitalObject#"
-     xml:base="http://www.esipfed.org/DigitalObject"
+<rdf:RDF xmlns="http://purl.org/narock/dc/DigitalObject#"
+     xml:base="http://purl.org/narock/dc/DigitalObject"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:DigitalObject="http://www.esipfed.org/DigitalObject#">
-    <owl:Ontology rdf:about="http://www.esipfed.org/DigitalObject"/>
+     xmlns:DigitalObject="http://purl.org/narock/dc/DigitalObject#">
+    <owl:Ontology rdf:about="http://purl.org/narock/dc/DigitalObject"/>
     
 
 
@@ -22,29 +22,29 @@
     
 
 
-    <!-- http://www.esipfed.org/DigitalObject#isAggregationOf -->
+    <!-- http://purl.org/narock/dc/DigitalObject#isAggregationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/DigitalObject#isAggregationOf">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/DigitalObject#DigitalObject"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/DigitalObject#DigitalCollection"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/DigitalObject#isAggregationOf">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/DigitalObject#DigitalObject"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/DigitalObject#DigitalCollection"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.esipfed.org/DigitalObject#isDescribedBy -->
+    <!-- http://purl.org/narock/dc/DigitalObject#isDescribedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/DigitalObject#isDescribedBy">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/DigitalObject#DigitalObject"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/DigitalObject#isDescribedBy">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/DigitalObject#DigitalObject"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/MetadataDescription#MetadataDescription"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.esipfed.org/DigitalObject#isIdentifiedBy -->
+    <!-- http://purl.org/narock/dc/DigitalObject#isIdentifiedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/DigitalObject#isIdentifiedBy">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/DigitalObject#DigitalObject"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/PersistentID#PersistentID"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/DigitalObject#isIdentifiedBy">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/DigitalObject#DigitalObject"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/PersistentID#PersistentID"/>
     </owl:ObjectProperty>
     
 
@@ -60,29 +60,29 @@
     
 
 
-    <!-- http://www.esipfed.org/DigitalObject#BitSequence -->
+    <!-- http://purl.org/narock/dc/DigitalObject#BitSequence -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/DigitalObject#BitSequence"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/DigitalObject#BitSequence"/>
     
 
 
-    <!-- http://www.esipfed.org/DigitalObject#DigitalCollection -->
+    <!-- http://purl.org/narock/dc/DigitalObject#DigitalCollection -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/DigitalObject#DigitalCollection"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/DigitalObject#DigitalCollection"/>
     
 
 
-    <!-- http://www.esipfed.org/DigitalObject#DigitalObject -->
+    <!-- http://purl.org/narock/dc/DigitalObject#DigitalObject -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/DigitalObject#DigitalObject">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/DigitalObject#BitSequence"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/DigitalObject#DigitalObject">
+        <rdfs:subClassOf rdf:resource="http://purl.org/narock/dc/DigitalObject#BitSequence"/>
     </owl:Class>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#PersistentID -->
+    <!-- http://purl.org/narock/dc/PersistentID#PersistentID -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/PersistentID#PersistentID"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/PersistentID#PersistentID"/>
 </rdf:RDF>
 
 

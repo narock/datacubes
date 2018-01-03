@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.esipfed.org/MetadataDescription#"
-     xml:base="http://www.esipfed.org/MetadataDescription"
+<rdf:RDF xmlns="http://purl.org/narock/dc/MetadataDescription#"
+     xml:base="http://purl.org/narock/dc/MetadataDescription"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:MetadataDescription="http://www.esipfed.org/MetadataDescription#"
+     xmlns:MetadataDescription="http://purl.org/narock/dc/MetadataDescription#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.esipfed.org/MetadataDescription"/>
+    <owl:Ontology rdf:about="http://purl.org/narock/dc/MetadataDescription"/>
     
 
 
@@ -22,39 +22,38 @@
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#containsDataElement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#containsDataElement -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#containsDataElement">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#containsDataElement">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#hasDataArrangement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasDataArrangement -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataArrangement">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasDataArrangement">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#MetadataDescription"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataArrangement"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#hasDataColumn -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasDataColumn -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataColumn">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#CsvArrangement"/>
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#TsvArrangement"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasDataColumn">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#AsciiArrangement"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#hasDataElement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasDataElement -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataElement">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasDataElement">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataArrangement"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
     </owl:ObjectProperty>
     
 
@@ -70,76 +69,91 @@
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#hasColumnNumber -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasColumnNumber -->
 
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasColumnNumber"/>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasCommonName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasCommonName">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasColumnNumber">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#hasDataType -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasCommonName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataType">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasEndDate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasEndDate">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasFillValue -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasFillValue"/>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasHeaderLines -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasHeaderLines">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasLocalName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasLocalName">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasCommonName">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#hasStartDate -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasCommonNameUri -->
 
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasStartDate">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasCommonNameUri">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasDataType -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasDataType">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasEndDate">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#MetadataDescription"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#hasUnits -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasFillValue -->
 
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasUnits">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasFillValue">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasHeaderLines -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasHeaderLines">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#AsciiArrangement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasLocalName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasLocalName">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasStartDate">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#MetadataDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/narock/dc/MetadataDescription#hasUnits -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/MetadataDescription#hasUnits">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
@@ -156,58 +170,60 @@
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#AsciiArrangement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#AsciiArrangement -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#AsciiArrangement">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/MetadataDescription#AsciiArrangement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataArrangement"/>
+        <owl:disjointWith rdf:resource="http://purl.org/narock/dc/MetadataDescription#BinaryArrangement"/>
     </owl:Class>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#BinaryArrangement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#BinaryArrangement -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#BinaryArrangement">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/MetadataDescription#BinaryArrangement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataArrangement"/>
     </owl:Class>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#CsvArrangement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#CsvArrangement -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#CsvArrangement">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/MetadataDescription#CsvArrangement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/narock/dc/MetadataDescription#AsciiArrangement"/>
+        <owl:disjointWith rdf:resource="http://purl.org/narock/dc/MetadataDescription#TsvArrangement"/>
     </owl:Class>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#DataArrangement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#DataArrangement -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/MetadataDescription#DataArrangement"/>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#DataColumn -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#DataColumn -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataColumn"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#DataElement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#DataElement -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#MetadataDescription -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#MetadataDescription -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/MetadataDescription#MetadataDescription"/>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#TsvArrangement -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#TsvArrangement -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#TsvArrangement">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/MetadataDescription#TsvArrangement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/narock/dc/MetadataDescription#AsciiArrangement"/>
     </owl:Class>
 </rdf:RDF>
 

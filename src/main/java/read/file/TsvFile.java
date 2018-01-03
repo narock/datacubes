@@ -7,7 +7,6 @@ import java.util.List;
 import java.io.File;
 
 import util.Config;
-import util.FileWrite;
 import util.Namespaces;
 import write.DataCubeFromRows;
 import owl.Instances;
@@ -80,7 +79,8 @@ public class TsvFile implements DataCube {
 		
 	}
 	
-	public OntModel readData( String filePath, String fileAccessPathUri, Individual dataArrangement, OntModel ontModel ) {
+	public OntModel readData( String filePath, String fileAccessPathUri, Individual dataArrangement, OntModel ontModel, 
+			boolean verbose ) {
 		
 		DataCubeFromRows dataCubeWriter = new DataCubeFromRows ();
 		
@@ -94,24 +94,30 @@ public class TsvFile implements DataCube {
 	    TsvParser parser = new TsvParser(settings);
 
 	    // parses all rows in one go.
+	    if (verbose) { System.out.println("Parsing TSV file..."); }
 	    List <String[]> allRows = parser.parseAll( new File ( filePath ) );
 	    //String[] headers = allRows.get(0);
-	    
-	    // get parameter names and data types from the headers
-	    ArrayList <AsciiMetadata> metadata = getMetadata( ontModel, dataArrangement );
-	    
-	    // get datacube representation in turtle format
-	    String turtle1 = dataCubeWriter.dataCubeDescriptionAsTurtle(fileAccessPathUri, metadata);
-	    String turtle2 = dataCubeWriter.dataCubeRowsToTurtle(metadata, allRows, 1);
-	    String turtle = turtle1 + turtle2;
-	    	
-	    // write turtle out to file for testing
-	    FileWrite fw = new FileWrite();
+	    	    
+	    // set up the output file name
 	    String[] parts = fileAccessPathUri.split("#");
 	    String f = Config.downloadDir + "datacube_" + parts[1].trim() + ".ttl";
-	    fw.newFile( f, turtle );
+	    
+	    // if, for some reason, this file already exits then delete it
+	    File fle = new File (f);
+	    if ( fle.exists() ) { fle.delete(); }
+	    
+	    // get parameter names and data types from the headers
+	    if (verbose) { System.out.println("Getting parameter names form data arrangement..."); }
+	    ArrayList <AsciiMetadata> metadata = getMetadata( ontModel, dataArrangement );
+	    	    
+	    // get datacube representation in turtle format
+	    if (verbose) { System.out.println("Creating Data Cube Description as Turtle..."); }
+	    dataCubeWriter.dataCubeDescriptionAsTurtle(f, fileAccessPathUri, metadata);
+	    if (verbose) { System.out.println("Creating Data Cube Rows as Turtle..."); }
+	    dataCubeWriter.dataCubeRowsToTurtle(f, metadata, allRows, 1);
 	    
 	    // read into a new ontology model
+	    if (verbose) { System.out.println("Putting into ont model..."); }
 		OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_RDFS_INF);
 		try {
 			model.read(new FileInputStream(f),null,"TTL");

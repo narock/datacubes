@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.esipfed.org/PersistentID#"
-     xml:base="http://www.esipfed.org/PersistentID"
+<rdf:RDF xmlns="http://purl.org/narock/dc/PersistentID#"
+     xml:base="http://purl.org/narock/dc/PersistentID"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:PersistentID="http://www.esipfed.org/PersistentID#">
-    <owl:Ontology rdf:about="http://www.esipfed.org/PersistentID"/>
+     xmlns:PersistentID="http://purl.org/narock/dc/PersistentID#">
+    <owl:Ontology rdf:about="http://purl.org/narock/dc/PersistentID"/>
     
 
 
@@ -22,9 +22,9 @@
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#checkSumTypes -->
+    <!-- http://purl.org/narock/dc/PersistentID#checkSumTypes -->
 
-    <rdfs:Datatype rdf:about="http://www.esipfed.org/PersistentID#checkSumTypes">
+    <rdfs:Datatype rdf:about="http://purl.org/narock/dc/PersistentID#checkSumTypes">
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -63,29 +63,29 @@
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#hasAccessPath -->
+    <!-- http://purl.org/narock/dc/PersistentID#hasAccessPath -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/PersistentID#hasAccessPath">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/PersistentID#PersistentID"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/PersistentID#AccessPath"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/PersistentID#hasAccessPath">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/PersistentID#PersistentID"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/PersistentID#AccessPath"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#hasDataCitation -->
+    <!-- http://purl.org/narock/dc/PersistentID#hasDataCitation -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/PersistentID#hasDataCitation">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/PersistentID#PersistentID"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/PersistentID#DataCitation"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/PersistentID#hasDataCitation">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/PersistentID#PersistentID"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/PersistentID#DataCitation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#hasDataIdentifier -->
+    <!-- http://purl.org/narock/dc/PersistentID#hasDataIdentifier -->
 
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/PersistentID#hasDataIdentifier">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/PersistentID#PersistentID"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/PersistentID#DataIdentifier"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/narock/dc/PersistentID#hasDataIdentifier">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/PersistentID#PersistentID"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/PersistentID#DataIdentifier"/>
     </owl:ObjectProperty>
     
 
@@ -101,25 +101,28 @@
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#hasCheckSumType -->
+    <!-- http://purl.org/narock/dc/PersistentID#hasCheckSumType -->
 
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/PersistentID#hasCheckSumType">
-        <rdfs:range rdf:resource="http://www.esipfed.org/PersistentID#checkSumTypes"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/PersistentID#hasCheckSumType">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/PersistentID#FileAccessPath"/>
+        <rdfs:range rdf:resource="http://purl.org/narock/dc/PersistentID#checkSumTypes"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#hasCheckSumValue -->
+    <!-- http://purl.org/narock/dc/PersistentID#hasCheckSumValue -->
 
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/PersistentID#hasCheckSumValue">
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/PersistentID#hasCheckSumValue">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/PersistentID#FileAccessPath"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#hasUrl -->
+    <!-- http://purl.org/narock/dc/PersistentID#hasUrl -->
 
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/PersistentID#hasUrl">
+    <owl:DatatypeProperty rdf:about="http://purl.org/narock/dc/PersistentID#hasUrl">
+        <rdfs:domain rdf:resource="http://purl.org/narock/dc/PersistentID#FileAccessPath"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -136,35 +139,35 @@
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#AccessPath -->
+    <!-- http://purl.org/narock/dc/PersistentID#AccessPath -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/PersistentID#AccessPath"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/PersistentID#AccessPath"/>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#DataCitation -->
+    <!-- http://purl.org/narock/dc/PersistentID#DataCitation -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/PersistentID#DataCitation"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/PersistentID#DataCitation"/>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#DataIdentifier -->
+    <!-- http://purl.org/narock/dc/PersistentID#DataIdentifier -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/PersistentID#DataIdentifier"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/PersistentID#DataIdentifier"/>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#FileAccessPath -->
+    <!-- http://purl.org/narock/dc/PersistentID#FileAccessPath -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/PersistentID#FileAccessPath">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/PersistentID#AccessPath"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/PersistentID#FileAccessPath">
+        <rdfs:subClassOf rdf:resource="http://purl.org/narock/dc/PersistentID#AccessPath"/>
     </owl:Class>
     
 
 
-    <!-- http://www.esipfed.org/PersistentID#PersistentID -->
+    <!-- http://purl.org/narock/dc/PersistentID#PersistentID -->
 
-    <owl:Class rdf:about="http://www.esipfed.org/PersistentID#PersistentID"/>
+    <owl:Class rdf:about="http://purl.org/narock/dc/PersistentID#PersistentID"/>
 </rdf:RDF>
 
 

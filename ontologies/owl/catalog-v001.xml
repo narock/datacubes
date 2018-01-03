@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="http://www.esipfed.org/DigitalObject" uri="DigitalObject.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="http://www.esipfed.org/MetadataDescription" uri="MetadataDescription.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="http://www.esipfed.org/PersistentID" uri="PersistentID.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/DigitalObject" uri="BCO-DMO_examples/2333/DigitalObject_2333.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/DigitalObject" uri="BCO-DMO_examples/552076_copy/DigitalObject_552076.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/DigitalObject" uri="BCO-DMO_examples/552076/DigitalObject_552076.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/DigitalObject" uri="BCO-DMO_examples/2333_copy/DigitalObject_2333.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/MetadataDescription" uri="BCO-DMO_examples/2333/MetadataDescription_2333.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/MetadataDescription" uri="BCO-DMO_examples/552076_copy/MetadataDescription_552076.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/MetadataDescription" uri="BCO-DMO_examples/552076/MetadataDescription_552076.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/MetadataDescription" uri="BCO-DMO_examples/2333_copy/MetadataDescription_2333.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/PersistentID" uri="BCO-DMO_examples/2333/PersistentID_2333.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/PersistentID" uri="BCO-DMO_examples/552076_copy/PersistentID_552076.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/PersistentID" uri="BCO-DMO_examples/552076/PersistentID_552076.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1502211257324" name="shadowed:http://www.esipfed.org/PersistentID" uri="BCO-DMO_examples/2333_copy/PersistentID_2333.owl"/>
+    </group>
+</catalog>

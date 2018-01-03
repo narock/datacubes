@@ -14,7 +14,7 @@ import java.util.Iterator;
 public class DataCubeFactory {
 	
 	public DataCube createDataCubeFromFile( Individual digitalObject, OntModel ontModel, 
-			String filePath, String fileAccessPathUri ) { 
+			String filePath, String fileAccessPathUri, boolean verbose ) { 
 		
 		Instances instances = new Instances ();
 		
@@ -33,12 +33,12 @@ public class DataCubeFactory {
 			  // RDF type also includes http://www.w3.org/2002/07/owl#NamedIndividual
 			  if ( cls.toString().contains("Arrangement") ) { dataArrangementType = cls.toString(); }
 		}
-		
+				
 		// create the correct object
 		DataCube datacube = null;
 		if ( dataArrangementType.equals( Namespaces.metadataDescription + "TsvArrangement") ) { 
 			TsvFile tsvFile = new TsvFile();
-			OntModel oModel = tsvFile.readData( filePath, fileAccessPathUri, dataArrangementIn, ontModel );
+			OntModel oModel = tsvFile.readData( filePath, fileAccessPathUri, dataArrangementIn, ontModel, verbose );
 			datacube = tsvFile;
 			datacube.setOntModel( oModel );
 		}
@@ -56,7 +56,7 @@ public class DataCubeFactory {
 			Individual accessPathInstance = instances.getIndividualFromUri( accessPathUri, ontModel );
 			GetDataFromUrl getData = new GetDataFromUrl ();
 			String path = getData.downloadFromOntModel( accessPathInstance, ontModel, verbose );
-			DataCube datacube = createDataCubeFromFile( digitalObject, ontModel, path, accessPathUri );
+			DataCube datacube = createDataCubeFromFile( digitalObject, ontModel, path, accessPathUri, verbose );
 		
 			return datacube;
 			
