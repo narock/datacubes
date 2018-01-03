@@ -21,12 +21,9 @@ public class OutputAllClassesInstances {
 		String dir = args[0]; // args[0] should include the trailing /
 		
 		ArrayList <String> files = new ArrayList <String> ();
-		//files.add(dir + "BCO-DMO_examples/2333_copy/DigitalObject_2333.owl");
-		//files.add(dir + "BCO-DMO_examples/2333_copy/PersistentID_2333.owl");
-		//files.add(dir + "BCO-DMO_examples/2333_copy/MetadataDescription_2333.owl");
-		files.add(dir + "BCO-DMO_examples/552076_copy/DigitalObject_552076.owl");
-		files.add(dir + "BCO-DMO_examples/552076_copy/PersistentID_552076.owl");
-		files.add(dir + "BCO-DMO_examples/552076_copy/MetadataDescription_552076.owl");
+		files.add(dir + "BCO-DMO_examples/552076/DigitalObject_552076.owl");
+		files.add(dir + "BCO-DMO_examples/552076/PersistentID_552076.owl");
+		files.add(dir + "BCO-DMO_examples/552076/MetadataDescription_552076.owl");
 		
 		MergedModel model = new MergedModel();
 		OntModel ontModel = model.readFromFiles(files);

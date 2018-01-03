@@ -8,11 +8,11 @@ import org.apache.jena.rdf.model.Property;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.Individual;
 
+import cubeQueries.Queries;
 import read.DataCubeFactory;
 import read.DataCube;
 import util.Namespaces;
 import owl.Instances;
-import owl.sparql.*;
 
 public class TestWorkflow {
 	
@@ -24,12 +24,9 @@ public class TestWorkflow {
 		String dir = args[0]; // args[0] should include the trailing "/"
 		
 		ArrayList <String> files = new ArrayList <String> ();
-		//files.add(dir + "BCO-DMO_examples/2333_copy/DigitalObject_2333.owl");
-		//files.add(dir + "BCO-DMO_examples/2333_copy/PersistentID_2333.owl");
-		//files.add(dir + "BCO-DMO_examples/2333_copy/MetadataDescription_2333.owl");
-		files.add(dir + "BCO-DMO_examples/552076_copy/DigitalObject_552076.owl");
-		files.add(dir + "BCO-DMO_examples/552076_copy/PersistentID_552076.owl");
-		files.add(dir + "BCO-DMO_examples/552076_copy/MetadataDescription_552076.owl");
+		files.add(dir + "BCO-DMO_examples/552076/DigitalObject_552076.owl");
+		files.add(dir + "BCO-DMO_examples/552076/PersistentID_552076.owl");
+		files.add(dir + "BCO-DMO_examples/552076/MetadataDescription_552076.owl");
 		
 		// this factory will be used to create our data cubes
 		DataCubeFactory dcFactory = new DataCubeFactory ();
@@ -78,15 +75,9 @@ public class TestWorkflow {
 			// try a SPARQL query over the datacube
 			if ( verbose ) { System.out.println("Generating ontology model from DataCube..."); }
 			OntModel cubeOntModel = datacube.getOntModel();
-			String query = 
-					"SELECT ?obs WHERE { " +
-					"  ?obs a <http://purl.org/linked-data/cube#Observation> . " +
-		            "  ?obs <http://purl.org/narock/dc/datacube#taxon> ?value . " +
-					"  FILTER ( regex (str(?value), \"Calanus_finmarchicus\", \"i\") ) " +
-		            "}";
-			SparqlQueryExecution sparql = new SparqlQueryExecution ();
-			if ( verbose ) { System.out.println("Executing SPARQL Query Over DataCube..."); }
-			ArrayList <String> results = sparql.queryMemoryModel(cubeOntModel, query, "?obs");
+			Queries query = new Queries ();
+			ArrayList <String> results = 
+					query.hasExactValue( "Calanus_finmarchicus", cubeOntModel, "?obs", true );
 			for ( int i=0; i<results.size(); i++ ) {
 				System.out.println("Calanus finmarchicus found in observation: " + results.get(i));
 			}

@@ -1,210 +1,17 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.esipfed.org/MetadataDescription#"
-     xml:base="http://www.esipfed.org/MetadataDescription"
+<rdf:RDF xmlns="http://purl.org/narock/dc/MetadataDescription#"
+     xml:base="http://purl.org/narock/dc/MetadataDescription"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:MetadataDescription="http://www.esipfed.org/MetadataDescription#"
+     xmlns:MetadataDescription="http://purl.org/narock/dc/MetadataDescription#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.esipfed.org/MetadataDescription"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#containsDataElement -->
-
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#containsDataElement">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasDataArrangement -->
-
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataArrangement">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasDataColumn -->
-
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataColumn">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#CsvArrangement"/>
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#TsvArrangement"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasDataElement -->
-
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataElement">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasColumnNumber -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasColumnNumber"/>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasCommonName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasCommonName">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasDataType -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasDataType">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasEndDate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasEndDate">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasHeaderLines -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasHeaderLines">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasLocalName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasLocalName">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasStartDate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasStartDate">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#hasUnits -->
-
-    <owl:DatatypeProperty rdf:about="http://www.esipfed.org/MetadataDescription#hasUnits">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#AsciiArrangement -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#AsciiArrangement">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#BinaryArrangement -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#BinaryArrangement">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#CsvArrangement -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#CsvArrangement">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#DataArrangement -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataArrangement"/>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#DataColumn -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#DataElement -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#DataElement"/>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#MetadataDescription -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#TsvArrangement -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#TsvArrangement">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/MetadataDescription#AsciiArrangement"/>
-    </owl:Class>
-    
-
+    <owl:Ontology rdf:about="http://purl.org/narock/dc/MetadataDescription">
+        <owl:imports rdf:resource="http://purl.org/narock/dc/DigitalObject" />
+        <owl:imports rdf:resource="http://purl.org/narock/dc/MetadataDescription" />
+        <owl:imports rdf:resource="http://purl.org/narock/dc/PersistentID" />
+    </owl:Ontology>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -214,579 +21,577 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
+    <!-- http://purl.org/narock/dc/MetadataDescription#bcodmo_2333_arrangement -->
 
-    <!-- http://www.esipfed.org/MetadataDescription#bcodmo_2333_arrangement -->
-
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#bcodmo_2333_arrangement">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#TsvArrangement"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_01"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_02"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_03"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_04"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_05"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_06"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_07"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_08"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_09"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_10"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_11"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_12"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_13"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_14"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_15"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_16"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_17"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_18"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_19"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_20"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_21"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_22"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_23"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_24"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_25"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_26"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_27"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_28"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_29"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_30"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_31"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_32"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_33"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_34"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_35"/>
-        <hasDataColumn rdf:resource="http://www.esipfed.org/MetadataDescription#column_36"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#bcodmo_2333_arrangement">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#TsvArrangement"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_01"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_02"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_03"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_04"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_05"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_06"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_07"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_08"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_09"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_10"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_11"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_12"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_13"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_14"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_15"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_16"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_17"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_18"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_19"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_20"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_21"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_22"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_23"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_24"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_25"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_26"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_27"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_28"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_29"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_30"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_31"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_32"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_33"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_34"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_35"/>
+        <hasDataColumn rdf:resource="http://purl.org/narock/dc/MetadataDescription#column_36"/>
         <hasHeaderLines rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasHeaderLines>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#bcodmo_metadata_2333 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#bcodmo_metadata_2333 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#bcodmo_metadata_2333">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-        <hasDataArrangement rdf:resource="http://www.esipfed.org/MetadataDescription#bcodmo_2333_arrangement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#bcodmo_metadata_2333">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#MetadataDescription"/>
+        <hasDataArrangement rdf:resource="http://purl.org/narock/dc/MetadataDescription#bcodmo_2333_arrangement"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_01 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_01 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_01">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement01" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_01">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement01" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_02 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_02 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_02">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement02" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_02">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement02" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_03 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_03 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_03">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement03" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_03">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement03" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_04 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_04 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_04">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement04" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_04">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement04" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_05 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_05 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_05">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement05" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_05">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement05" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_06 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_06 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_06">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement06" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_06">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement06" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_07 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_07 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_07">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement07" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_07">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement07" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_08 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_08 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_08">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement08" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_08">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement08" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_09 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_09 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_09">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement09" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_09">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement09" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_10 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_10 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_10">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement10" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_10">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement10" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_11 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_11 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_11">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement11" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_11">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement11" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_12 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_12 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_12">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement12" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_12">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement12" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_13 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_13 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_13">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement13" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_13">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement13" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_14 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_14 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_14">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement14" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_14">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement14" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_15 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_15 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_15">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement15" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_15">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement15" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_16 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_16 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_16">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement16" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_16">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement16" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_17 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_17 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_17">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement17" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_17">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement17" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_18 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_18 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_18">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement18" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_18">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement18" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_19 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_19 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_19">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement19" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_19">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement19" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_20 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_20 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_20">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement20" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_20">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement20" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_21 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_21 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_21">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement21" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_21">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement21" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_22 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_22 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_22">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement22" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_22">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement22" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_23 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_23 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_23">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement23" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_23">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement23" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasColumnNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.esipfed.org/MetadataDescription#column_24 -->
+    <!-- http://purl.org/narock/dc/MetadataDescription#column_24 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_24">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement24" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_24">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement24" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasColumnNumber>
     </owl:NamedIndividual>
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_25">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement25" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_25">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement25" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_26">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement26" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_26">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement26" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_27">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement27" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_27">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement27" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_28">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement28" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_28">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement28" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_29">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement29" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_29">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement29" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_30">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement30" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_30">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement30" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_31">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement31" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_31">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement31" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_32">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement32" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_32">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement32" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_33">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement33" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_33">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement33" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_34">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement34" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_34">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement34" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_35">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement35" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_35">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement35" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hasColumnNumber>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#column_36">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataColumn"/>
-        <containsDataElement rdf:resource="http://www.esipfed.org/MetadataDescription#dataElement36" />
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#column_36">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataColumn"/>
+        <containsDataElement rdf:resource="http://purl.org/narock/dc/MetadataDescription#dataElement36" />
         <hasColumnNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</hasColumnNumber>
     </owl:NamedIndividual>
 
 
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement01">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement01">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cruiseid</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement02">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement02">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cruise_type</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement03">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement03">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year_cruise_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement04">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement04">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">month_cruise_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement05">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement05">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">day_cruise_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement06">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement06">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year_cruise_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement07">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement07">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">month_cruise_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement08">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement08">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">day_cruise_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement09">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement09">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">station</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement10">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement10">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">station_std</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement11">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement11">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">depth_w</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement12">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement12">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual> 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement13">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement13">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inst</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement14">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement14">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tow</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement15">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement15">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lat_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
-        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasFillValue>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement16">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement16">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lon_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
-        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasFillValue>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>                                  
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement17">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement17">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year_utc_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement18">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement18">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">month_utc_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement19">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement19">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">day_utc_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual> 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement20">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement20">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time_utc_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement21">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement21">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year_utc_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement22">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement22">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">month_utc_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement23">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement23">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">day_utc_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>   
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement24">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement24">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time_utc_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement25">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement25">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allsort_flag</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement26">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement26">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#int</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement27">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement27">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vol_net</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement28">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement28">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">depth_begin</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement29">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement29">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">depth_end</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement30">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement30">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gearcode</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
-        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasFillValue>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement31">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement31">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count_flag</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement32">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement32">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counter</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement33">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement33">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taxon</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement34">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement34">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taxon_code</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#integer</hasDataType>
         <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement35">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement35">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stage</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#string</hasDataType>
-        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasFillValue>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/MetadataDescription#dataElement36">
-        <rdf:type rdf:resource="http://www.esipfed.org/MetadataDescription#DataElement"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/MetadataDescription#dataElement36">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/MetadataDescription#DataElement"/>
         <hasLocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count</hasLocalName>
         <hasDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyUri">http://www.w3.org/2001/XMLSchema#double</hasDataType>
-        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasFillValue>
+        <hasFillValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nd</hasFillValue>
     </owl:NamedIndividual>
     
 

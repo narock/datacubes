@@ -1,96 +1,17 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.esipfed.org/DigitalObject#"
-     xml:base="http://www.esipfed.org/DigitalObject"
+<rdf:RDF xmlns="http://purl.org/narock/dc/DigitalObject#"
+     xml:base="http://purl.org/narock/dc/DigitalObject"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:DigitalObject="http://www.esipfed.org/DigitalObject#">
-    <owl:Ontology rdf:about="http://www.esipfed.org/DigitalObject"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.esipfed.org/DigitalObject#isAggregationOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/DigitalObject#isAggregationOf">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/DigitalObject#DigitalObject"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/DigitalObject#DigitalCollection"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.esipfed.org/DigitalObject#isDescribedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/DigitalObject#isDescribedBy">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/DigitalObject#DigitalObject"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.esipfed.org/DigitalObject#isIdentifiedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.esipfed.org/DigitalObject#isIdentifiedBy">
-        <rdfs:domain rdf:resource="http://www.esipfed.org/DigitalObject#DigitalObject"/>
-        <rdfs:range rdf:resource="http://www.esipfed.org/PersistentID#PersistentID"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.esipfed.org/DigitalObject#BitSequence -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/DigitalObject#BitSequence"/>
-    
-
-
-    <!-- http://www.esipfed.org/DigitalObject#DigitalCollection -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/DigitalObject#DigitalCollection"/>
-    
-
-
-    <!-- http://www.esipfed.org/DigitalObject#DigitalObject -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/DigitalObject#DigitalObject">
-        <rdfs:subClassOf rdf:resource="http://www.esipfed.org/DigitalObject#BitSequence"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.esipfed.org/MetadataDescription#MetadataDescription -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/MetadataDescription#MetadataDescription"/>
-    
-
-
-    <!-- http://www.esipfed.org/PersistentID#PersistentID -->
-
-    <owl:Class rdf:about="http://www.esipfed.org/PersistentID#PersistentID"/>
-    
-
+     xmlns:DigitalObject="http://purl.org/narock/dc/DigitalObject#">
+    <owl:Ontology rdf:about="http://purl.org/narock/dc/DigitalObject">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/narock/datacubes/master/ontologies/owl/DigitalObject.owl" />
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/narock/datacubes/master/ontologies/owl/MetadataDescription.owl" />
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/narock/datacubes/master/ontologies/owl/PersistentID.owl" />
+    </owl:Ontology>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -103,12 +24,12 @@
     
 
 
-    <!-- http://www.esipfed.org/DigitalObject#bcodmo_dataset_552076 -->
+    <!-- http://purl.org/narock/dc/DigitalObject#bcodmo_dataset_552076 -->
 
-    <owl:NamedIndividual rdf:about="http://www.esipfed.org/DigitalObject#bcodmo_dataset_552076">
-        <rdf:type rdf:resource="http://www.esipfed.org/DigitalObject#DigitalObject"/>
-        <isDescribedBy rdf:resource="http://www.esipfed.org/MetadataDescription#bcodmo_metadata_552076"/>
-        <isIdentifiedBy rdf:resource="http://www.esipfed.org/PersistentID#bcodmo_pid_552076"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/narock/dc/DigitalObject#bcodmo_dataset_552076">
+        <rdf:type rdf:resource="http://purl.org/narock/dc/DigitalObject#DigitalObject"/>
+        <isDescribedBy rdf:resource="http://purl.org/narock/dc/MetadataDescription#bcodmo_metadata_552076"/>
+        <isIdentifiedBy rdf:resource="http://purl.org/narock/dc/PersistentID#bcodmo_pid_552076"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
